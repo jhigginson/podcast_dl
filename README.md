@@ -18,9 +18,9 @@ Or install it yourself as:
 
 ## Features/Problems
 
-*One simple method to download podcasts given a feed url, number of podcasts to download and where to download them
-*Helper methods for downloading the raw xml data, counting the podcasts, parsing the download urls and downloading to a directory.
-*A sample application that downloads and organizes podcasts based on a yaml configuration file
+- One simple method to download podcasts given a feed url, number of podcasts to download and where to download them
+- Helper methods for downloading the raw xml data, counting the podcasts, parsing the download urls and downloading to a directory.
+- A sample application that downloads and organizes podcasts based on a yaml configuration file
 
 ## Contributing
 
