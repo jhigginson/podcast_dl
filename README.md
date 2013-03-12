@@ -18,7 +18,9 @@ Or install it yourself as:
 
 ## Features/Problems
 
-One simple method. Just give it a URL to an RSS feed, how many episodes you want and a download directory and it will download them for you. Some helper methods also to download xml, parse out media urls and download any list of urls.
+*One simple method to download podcasts given a feed url, number of podcasts to download and where to download them
+*Helper methods for downloading the raw xml data, counting the podcasts, parsing the download urls and downloading to a directory.
+*A sample application that downloads and organizes podcasts based on a yaml configuration file
 
 ## Contributing
 
