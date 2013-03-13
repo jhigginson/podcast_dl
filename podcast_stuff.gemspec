@@ -6,12 +6,12 @@ require 'podcast_dl'
 Gem::Specification.new do |s|
   s.name        = 'podcast_dl'
   s.version     = PodcastDl::VERSION
-  s.date        = '2013-02-28'
+  s.date        = '2013-03-12'
   s.summary     = "A Podcast Downloader Gem"
   s.description = "A gem to allow easy downloading of podcasts"
   s.authors     = ["John Higginson"]
   s.email       = 'jhigginson@gmail.com'
   s.homepage    = 'http://rubygems.org/gems/podcast_dl'
-  s.files       = ["lib/podcast_dl.rb", "lib/podcast_dl/version.rb", "lib/podcast_dl/downloader.rb", "lib/podcast_dl/podcast_dl.rb"]
-  s.executables << 'podcast_organzier'
+  s.files       = ["lib/podcast_dl.rb", "lib/podcast_dl/version.rb", "lib/podcast_dl/downloader.rb", "lib/podcast_dl/podcast_dl.rb", "lib/podcast_dl/channel.rb", "lib/podcast_dl/item.rb", "lib/podcast_dl/enclosure.rb"]
+  s.executables << 'podcast_dl'
 end

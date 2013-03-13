@@ -1,5 +1,4 @@
 ---
 directory: /Users/john/podcasts/
 podcasts:
-	-name: KEXP song of the day
-	-url: 
+	-
