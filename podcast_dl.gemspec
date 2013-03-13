@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.name        = 'podcast_dl'
   s.version     = PodcastDl::VERSION
   s.date        = '2013-03-12'
-  s.summary     = "A Podcast Downloader Gem"
-  s.description = "A gem to allow easy downloading of podcasts"
+  s.summary     = "A Podcast Downloader and Metadata Parser Gem"
+  s.description = "A gem to allow easy downloading of podcasts and access to metadata"
   s.authors     = ["John Higginson"]
   s.email       = 'jhigginson@gmail.com'
   s.homepage    = 'http://rubygems.org/gems/podcast_dl'
