@@ -1,6 +1,39 @@
 #!/usr/bin/env ruby
 
+#This is just an example script demonstrating how to use PodastDl to downlaod podcasts to a directory.
+
 require 'podcast_dl'
 require 'yaml'
+require 'fileutils'
 
 puts 'podcast_dl script executing'
+
+begin
+	config = YAML::load_file "config.txt"
+rescue
+	puts "There was a problem loading the config.txt file. Make sure it exists and follows this form:\n" +
+				"---\n" +
+				":dl_dir: your_download_directory_path\n" +
+				":podcasts:\n" + 
+				"- :url: podcast_feed_url1\n" +
+  			"  :num: number_of_episodes_you_want_to_download\n" +
+				"- :url: podcast_feed_url2\n" +
+  			"  :num: 2\n"
+else
+	podcast_dir = config[:dl_dir]
+	podcasts = config[:podcasts]
+
+	podcasts.each do |podcast|
+		channel = PodcastDl::Channel.new(podcast[:url])
+		dl_dir = podcast_dir + channel.title + '/'
+
+		puts "Downloading latest #{podcast[:num]} episodes of #{channel.title} to #{dl_dir}" 
+		puts "Description: #{channel.description}"
+		
+		FileUtils.mkdir_p dl_dir
+		channel.download(podcast[:num], dl_dir)
+	end
+
+	puts "Downloading complete!"
+
+end

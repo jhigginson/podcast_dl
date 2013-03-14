@@ -13,13 +13,15 @@ module PodcastDl
 		
 		def self.dl_podcasts urls, directory
 			urls.each do |url|
-				File.open(directory + File.basename(url), "wb") do |saved_file|
-  				# the following "open" is provided by open-uri
-  				open(url, 'rb') do |read_file|
-    				saved_file.write(read_file.read)
-  				end
+				file_path = directory + File.basename(url)
+				if !File.exists?(file_path)
+					File.open(file_path, "wb") do |saved_file|
+  					# the following "open" is provided by open-uri
+  					open(url, 'rb') do |read_file|
+    					saved_file.write(read_file.read)
+  					end
+					end
 				end
-
 			end
 		end
 

@@ -16,6 +16,15 @@ module PodcastDl
 			parse
 		end
 
+		def download count, directory
+			urls = []
+			@items[0, count].each  do |item|
+				urls << item.enclosure.url
+			end
+
+			Downloader.dl_podcasts urls, directory
+		end
+
 		def to_s
 			@xml
 		end
@@ -30,15 +39,15 @@ module PodcastDl
 		end
 
 		def parse_title
-			@title = @doc.root.elements['channel/title'][0]
+			@title = @doc.root.elements['channel/title'][0].to_s
 		end
 
 		def parse_link
-			@link = @doc.root.elements['channel/link'][0]
+			@link = @doc.root.elements['channel/link'][0].to_s
 		end
 
 		def parse_description
-			@description = @doc.root.elements['channel/description'][0]
+			@description = @doc.root.elements['channel/description'][0].to_s
 		end
 
 		def parse_items

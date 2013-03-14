@@ -1,6 +1,6 @@
 # PodcastDl
 
-This is a gem that downloads podcasts. It also provides an object model for reading podcast rss feed metadata.
+This is a gem that downloads podcasts and their metadata. It also provides an object model for accessing common podcast metadata.
 
 ## Installation
 
@@ -18,8 +18,8 @@ Or install it yourself as:
 
 ## Features/Problems
 
-- One simple method to download podcasts given a feed url, number of podcasts to download and where to download them
 - An object framework for accessing podcast rss feed metadata.
+- Easy downloading of podcasts --just create a channel with a podcast feed url and call download on it.
 
 ## Contributing
 

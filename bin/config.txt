@@ -1,4 +1,7 @@
 ---
-directory: /Users/john/podcasts/
-podcasts:
-	-
+:dl_dir: /Users/john/podcasts/
+:podcasts:
+- :url: http://feeds.thisamericanlife.org/talpodcast?format=xml
+  :num: 1
+- :url: http://feeds.kexp.org/kexp/songoftheday?format=xml
+  :num: 2

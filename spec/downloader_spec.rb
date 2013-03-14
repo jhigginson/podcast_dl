@@ -22,9 +22,9 @@ describe PodcastDl::Downloader do
 
 	describe '::dl_podcasts' do
 
-		it 'should download urls to a directory' do
+		it 'should download urls to a directory', :slow => true do
 			urls = []
-			PodcastDl::Channel.new('http://feeds.kexp.org/kexp/songoftheday?format=xml').items[0, 2].each  do |item|
+			PodcastDl::Channel.new('http://feeds.kexp.org/kexp/songoftheday?format=xml').items[0, 1].each  do |item|
 				urls << item.enclosure.url
 			end
 
@@ -38,11 +38,6 @@ describe PodcastDl::Downloader do
 			result.should eq true
 		end
 
-	end
-
-	after(:all) do
-		#delete all the files downloaded in temp_dir
-		Dir.foreach(@temp_dir) {|f| fn = File.join(@temp_dir, f); File.delete(fn) if f != '.' && f != '..'}
 	end
 	
 end

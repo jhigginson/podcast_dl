@@ -12,6 +12,6 @@ Gem::Specification.new do |s|
   s.authors     = ["John Higginson"]
   s.email       = 'jhigginson@gmail.com'
   s.homepage    = 'http://rubygems.org/gems/podcast_dl'
-  s.files       = ["lib/podcast_dl.rb", "lib/podcast_dl/version.rb", "lib/podcast_dl/downloader.rb", "lib/podcast_dl/podcast_dl.rb", "lib/podcast_dl/channel.rb", "lib/podcast_dl/item.rb", "lib/podcast_dl/enclosure.rb"]
+  s.files       = ["lib/podcast_dl.rb", "lib/podcast_dl/version.rb", "lib/podcast_dl/downloader.rb", "lib/podcast_dl/channel.rb", "lib/podcast_dl/item.rb", "lib/podcast_dl/enclosure.rb"]
   s.executables << 'podcast_dl'
 end
