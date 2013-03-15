@@ -1,7 +1,7 @@
 ---
 :dl_dir: /Users/john/podcasts/
 :podcasts:
-- :url: http://feeds.thisamericanlife.org/talpodcast?format=xml
+- :url: http://www.npr.org/rss/podcast.php?id=510298
   :num: 1
 - :url: http://feeds.kexp.org/kexp/songoftheday?format=xml
   :num: 2

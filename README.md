@@ -20,6 +20,7 @@ Or install it yourself as:
 
 - An object framework for accessing podcast rss feed metadata.
 - Easy downloading of podcasts --just create a channel with a podcast feed url and call download on it.
+- An example script that downloads podcasts and gets metadata from a podcast rss feeds.
 
 ## Contributing
 
